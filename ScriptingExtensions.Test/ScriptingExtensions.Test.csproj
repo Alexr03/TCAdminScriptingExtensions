@@ -153,6 +153,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="JavaScriptTests.cs" />
+        <Compile Include="LuaTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

@@ -9,8 +9,8 @@ namespace TCAdmin.SDK.Scripting.Engines
     public class LuaEngine : IScriptingEngine
     {
         private string _script;
-        private Lua _lua;
-        private LuaGlobal _luaEnvironment;
+        private readonly Lua _lua;
+        private readonly LuaGlobal _luaEnvironment;
 
         public LuaEngine()
         {
@@ -37,7 +37,7 @@ namespace TCAdmin.SDK.Scripting.Engines
 
         public void SetScript(string script)
         {
-            _script = script;
+            _script = script.TrimStart('\n', '\r');
         }
 
         public int Execute(Credentials credentials)
